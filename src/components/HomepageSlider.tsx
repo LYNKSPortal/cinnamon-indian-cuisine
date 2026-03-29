@@ -8,11 +8,11 @@ export default function HomepageSlider() {
   const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % 5);
+    setCurrentSlide((prev) => (prev + 1) % 6);
   }, []);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + 5) % 5);
+    setCurrentSlide((prev) => (prev - 1 + 6) % 6);
   }, []);
 
   const goToSlide = useCallback((index: number) => {
@@ -55,7 +55,7 @@ export default function HomepageSlider() {
           break;
         case 'End':
           event.preventDefault();
-          goToSlide(4);
+          goToSlide(5);
           break;
       }
     };
@@ -67,38 +67,45 @@ export default function HomepageSlider() {
   const slides = [
     {
       id: 0,
-      image: '/homepage-slider/cinnamon-1.jpg',
-      title: 'Welcome to Cinnamon',
+      image: '/images/Slider/slider-img-01.jpg',
+      title: 'WELCOME TO CINNAMON',
       description: 'Authentic Indian dining with aromatic spices and rich flavors',
       buttonText: 'Reserve a Table'
     },
     {
       id: 1,
-      image: '/homepage-slider/cinnamon-2.jpg',
-      title: 'Traditional Indian Cuisine',
+      image: '/images/Slider/slider-img-02.jpg',
+      title: 'TRADITIONAL INDIAN CUISINE',
       description: 'Experience the diverse flavors of India with our authentic recipes',
       buttonText: 'View Our Menu'
     },
     {
       id: 2,
-      image: '/homepage-slider/cinnamon-3.jpg',
-      title: 'Fresh, Authentic Ingredients',
+      image: '/images/Slider/slider-img-03.jpg',
+      title: 'FRESH, AUTHENTIC INGREDIENTS',
       description: 'Quality spices and fresh ingredients prepared with passion',
       buttonText: 'Discover Our Story'
     },
     {
       id: 3,
-      image: '/homepage-slider/cinnamon-4.jpg',
-      title: 'Perfect for Every Occasion',
+      image: '/images/Slider/slider-img-04.jpg',
+      title: 'PERFECT FOR EVERY OCCASION',
       description: 'From family dinners to celebrations, we make every moment special',
       buttonText: 'Book Your Table'
     },
     {
       id: 4,
-      image: '/homepage-slider/cinnamon-5.jpg',
-      title: 'Warm Indian Hospitality',
+      image: '/images/Slider/slider-img-05.jpg',
+      title: 'WARM INDIAN HOSPITALITY',
       description: 'Where every guest is treated like family',
       buttonText: 'Make a Reservation'
+    },
+    {
+      id: 5,
+      image: '/images/Slider/slider-img-06.jpg',
+      title: 'EXPERIENCE THE TASTE OF INDIA',
+      description: 'Join us for an unforgettable culinary journey',
+      buttonText: 'Book Your Table'
     }
   ];
 
@@ -122,22 +129,28 @@ export default function HomepageSlider() {
           aria-hidden={currentSlide !== index}
         >
           <div 
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
+            className="w-full h-full relative"
+            style={{
+              backgroundImage: `url(${slide.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
             role="img"
-            aria-label={`Restaurant image ${index + 1}: ${slide.title}`}
+            aria-label={`Restaurant slide ${index + 1}: ${slide.title}`}
           >
-            <div className="w-full h-full flex items-center justify-center bg-black/30">
+            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="relative w-full h-full flex items-center justify-center">
               <div className="text-center text-white px-4 sm:px-6 md:px-8">
                 <h1 className="font-bold text-white mb-4 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                   {slide.title}
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-3xl mx-auto">
+                <p className="text-sm md:text-base lg:text-lg text-white mb-6 md:mb-8 max-w-3xl mx-auto">
                   {slide.description}
                 </p>
                 <Link 
                   href="/reservations"
-                  className="inline-block bg-primary text-white px-6 md:px-8 py-2.5 md:py-3 hover:bg-secondary transition-colors font-medium text-sm md:text-base"
+                  className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 md:px-8 py-2.5 md:py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
                   aria-label={`${slide.buttonText} - Navigate to reservations page`}
                 >
                   {slide.buttonText}
@@ -151,7 +164,7 @@ export default function HomepageSlider() {
       
       {/* Slide Indicators */}
       <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-        {[0, 1, 2, 3, 4].map((index) => (
+        {[0, 1, 2, 3, 4, 5].map((index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}

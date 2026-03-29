@@ -1,7 +1,7 @@
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FadeIn from '@/components/FadeIn';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -18,28 +18,23 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Section */}
       <section className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden" aria-labelledby="about-hero-heading">
-        <img 
-          src="/homepage-slider/cinnamon-2.jpg" 
-          alt="Restaurant background"
+        <div 
+          className="absolute inset-0"
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0
+            backgroundImage: 'url(/images/Slider/slider-img-02.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
           }}
-        />
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1 }}></div>
+        ></div>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 1 }}></div>
         <header className="relative h-full flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="text-center px-4 sm:px-6 md:px-8">
             <FadeIn>
-              <h1 id="about-hero-heading" className="font-bold text-white mb-3 md:mb-4 text-2xl sm:text-3xl md:text-4xl">
+              <h1 id="about-hero-heading" className="font-bold text-white mb-3 md:mb-4">
                 About Cinnamon
               </h1>
             </FadeIn>
@@ -57,29 +52,42 @@ export default function About() {
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <FadeIn delay={0.2} className="order-2 lg:order-1">
-              <img 
-                src="/restaurant-exterior.jpg" 
-                alt="Cinnamon Restaurant Exterior" 
-                className="w-full object-cover rounded-none"
-              />
+              <div className="w-full aspect-square rounded-none overflow-hidden">
+                <Image
+                  src="/images/outside-restaurant.jpg"
+                  alt="Cinnamon Restaurant Exterior"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
             </FadeIn>
             <FadeIn className="order-1 lg:order-2">
-              <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-xl md:text-2xl lg:text-3xl">Our Story</h2>
-              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Cinnamon was born from a dream to bring the authentic flavors of India to our community. 
-                Founded by Chef Raj Patel, our restaurant represents a culmination of over 25 years of 
-                culinary experience and a deep passion for Indian cuisine.
+              <h2 className="font-bold text-gray-900 mb-4 md:mb-6">Our Journey</h2>
+              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base lg:text-lg">
+                Cinnamon was created to bring something a little different to Castletown — a place where 
+                traditional Indian cooking meets a relaxed, modern dining experience. As a family-run restaurant 
+                led by Nadeem Younus, everything we do is rooted in genuine care for both our food and our customers.
               </p>
-              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Our name symbolizes the warmth and spice that defines Indian cooking - a place where guests 
-                can escape the everyday and immerse themselves in the rich aromas and hospitality that 
-                India is famous for.
+              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base lg:text-lg">
+                From the beginning, the aim has been simple: serve authentic, flavourful dishes using fresh 
+                ingredients and time-honoured recipes, while creating an atmosphere where everyone feels welcome. 
+                Over time, Cinnamon has grown into a local favourite, known for its friendly service, consistent 
+                quality, and the kind of food people come back for again and again.
               </p>
-              <p className="text-gray-600 text-sm md:text-base">
-                Every dish we serve tells a story of tradition, spice blends passed down through generations, 
-                and love for food. We source the finest ingredients and work closely with spice merchants 
-                to ensure authenticity in every bite.
+              <p className="text-gray-600 text-sm md:text-base lg:text-lg">
+                Whether it is a midweek meal, a weekend catch-up, or a takeaway to enjoy at home, we are proud 
+                to be part of the Castletown community.
               </p>
+              <div className="mt-6 md:mt-8">
+                <Link 
+                  href="/menu" 
+                  className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+                >
+                  View Our Menu
+                </Link>
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -90,29 +98,137 @@ export default function About() {
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
             <FadeIn className="order-1 lg:order-1">
-              <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-xl md:text-2xl lg:text-3xl">Our Chef</h2>
-              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                Chef Raj Patel brings a wealth of experience from working in some of India's most prestigious 
-                restaurants and hotels. Trained in the classic techniques of Indian cuisine while embracing 
-                modern culinary innovations, Chef Raj creates dishes that honour tradition while delighting the modern palate.
+              <h2 className="font-bold text-gray-900 mb-4 md:mb-6">Our Chef</h2>
+              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base lg:text-lg">
+                At the heart of Cinnamon is a passion for cooking that goes beyond the plate. Our kitchen is 
+                driven by experience, skill, and a deep understanding of traditional Indian flavours, with 
+                every dish prepared fresh to order.
               </p>
-              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                His philosophy is simple: let the spices speak for themselves. By focusing on quality, 
-                authentic spice blends, and respect for traditional methods, he creates menus that are both 
-                authentic and exciting.
+              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base lg:text-lg">
+                Our chef focuses on balance — blending spices carefully to bring out rich, layered flavours 
+                without overpowering the dish. From smoky tandoori specialities to slow-cooked curries, each 
+                recipe is crafted with attention to detail and respect for tradition, while still allowing 
+                room for a modern touch.
               </p>
-              <p className="text-gray-600 text-sm md:text-base">
-                "Cooking is not just about feeding people," says Chef Raj. "It's about creating memories, 
-                bringing families together, and sharing the joy of Indian hospitality through aromatic, 
-                flavorful dishes."
+              <p className="text-gray-600 text-sm md:text-base lg:text-lg">
+                We also understand that everyone's taste is different, which is why many of our dishes can 
+                be tailored to suit your preferred level of spice. Whether you enjoy something mild and 
+                creamy or bold and fiery, our goal is always the same: to deliver food that is full of 
+                flavour and made with care.
               </p>
+              <div className="mt-6 md:mt-8">
+                <Link 
+                  href="/reservations" 
+                  className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+                >
+                  Make a Reservation
+                </Link>
+              </div>
             </FadeIn>
             <FadeIn delay={0.2} className="order-2 lg:order-2">
-              <img 
-                src="/chef.jpg" 
-                alt="Chef Raj Patel" 
-                className="w-full object-cover rounded-none"
-              />
+              <div className="w-full aspect-square rounded-none overflow-hidden">
+                <Image
+                  src="/images/the-chef.jpg"
+                  alt="Cinnamon Chef"
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <FadeIn>
+            <h2 className="font-bold text-gray-900 mb-8 md:mb-12 text-center text-2xl md:text-3xl lg:text-4xl">
+              Gallery
+            </h2>
+          </FadeIn>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 max-[1350px]:grid-cols-2 gap-4 md:gap-6">
+            <FadeIn delay={0.1}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-01.jpg"
+                  alt="Restaurant interior"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.2}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-02.jpg"
+                  alt="Restaurant dining area"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.3}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-03.jpg"
+                  alt="Food presentation"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.4}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-04.jpg"
+                  alt="Restaurant ambiance"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.5}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-05.jpg"
+                  alt="Chef at work"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.6}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/Slider/slider-img-06.jpg"
+                  alt="Restaurant exterior"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.7}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/outside-restaurant.jpg"
+                  alt="Restaurant entrance"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={0.8}>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src="/images/the-chef.jpg"
+                  alt="Cinnamon chef"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>

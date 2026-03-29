@@ -8,15 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#D2691E', // Cinnamon brown
+        primary: '#6F1E2D', // Changed to dark red
         secondary: '#8B4513', // Saddle brown
-        accent: '#FF6B35', // Orange accent
+        accent: '#FFFFFF', // Changed to white
         dark: '#2C1810', // Dark brown
         light: '#FFF8F0', // Cream
       },
       fontFamily: {
-        heading: ['Georgia', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['SkemaProDisplay', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
       },
     },
   },

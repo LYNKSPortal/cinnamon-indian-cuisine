@@ -1,20 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --font-heading: Georgia, serif;
-  --font-body: 'Inter', sans-serif;
+/* SkemaProDisplay-SemiBold Font */
+@font-face {
+  font-family: 'SkemaProDisplay';
+  src: url('/fonts/SkemaProDisplay-SemiBold.eot');
+  src: url('/fonts/SkemaProDisplay-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/SkemaProDisplay-SemiBold.woff2') format('woff2'),
+       url('/fonts/SkemaProDisplay-SemiBold.woff') format('woff'),
+       url('/fonts/SkemaProDisplay-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  font-family: var(--font-body);
-}
+@layer base {
+  :root {
+    --font-heading: 'SkemaProDisplay', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  h4 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  }
+
+  h5 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  }
+
+  h6 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
 }
 
 /* Custom animations */

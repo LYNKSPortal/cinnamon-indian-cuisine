@@ -65,20 +65,16 @@ export default function ReservationForm() {
     <>
       {/* Hero Section */}
       <section className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden">
-        <img 
-          src="/homepage-slider/cinnamon-3.jpg" 
-          alt="Restaurant background"
+        <div 
+          className="absolute inset-0"
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0
+            backgroundImage: 'url(/images/Slider/slider-img-06.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
           }}
-        />
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1 }}></div>
+        ></div>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 1 }}></div>
         <header className="relative h-full flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="text-center px-4 sm:px-6 md:px-8">
             <FadeIn>
@@ -106,27 +102,27 @@ export default function ReservationForm() {
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               {/* Name For The Table */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">Name For The Table?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">Name For The Table?</label>
                 <input 
                   type="text" 
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-500" 
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all placeholder:text-gray-500" 
                   placeholder="Joe Smith"
                 />
               </div>
 
               {/* How Many People */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">How Many People? (8 or more please call)</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">How Many People? (8 or more please call)</label>
                 <select 
                   name="guests"
                   value={formData.guests}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-gray-500"
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all text-gray-500"
                 >
                   <option value="" className="text-gray-500">Select number</option>
                   <option value="1">1</option>
@@ -141,26 +137,26 @@ export default function ReservationForm() {
 
               {/* What Date */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">What Date?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">What Date?</label>
                 <input 
                   type="date" 
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-500" 
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all placeholder:text-gray-500" 
                 />
               </div>
 
               {/* Preferred Sitting Time */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">Preferred Sitting Time?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">Preferred Sitting Time?</label>
                 <select 
                   name="time"
                   value={formData.time}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-gray-500"
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all text-gray-500"
                 >
                   <option value="" className="text-gray-500">Select time</option>
                   <option value="11:30">11:30</option>
@@ -183,12 +179,12 @@ export default function ReservationForm() {
 
               {/* Flexible Booking */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">Is this a flexible booking? (If preferred time is unavailable)</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">Is this a flexible booking? (If preferred time is unavailable)</label>
                 <select 
                   name="flexible"
                   value={formData.flexible}
                   onChange={handleChange}
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-gray-500"
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all text-gray-500"
                 >
                   <option value="no">No</option>
                   <option value="yes">Yes</option>
@@ -197,41 +193,41 @@ export default function ReservationForm() {
 
               {/* Email */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">What's Your Email?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">What's Your Email?</label>
                 <input 
                   type="email" 
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-500" 
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all placeholder:text-gray-500" 
                   placeholder="joesmith@example.com"
                 />
               </div>
 
               {/* Phone */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">What's Your Number?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">What's Your Number?</label>
                 <input 
                   type="tel" 
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
                   required 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-500" 
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all placeholder:text-gray-500" 
                   placeholder="07624 000000"
                 />
               </div>
 
               {/* Extra Details */}
               <div className="space-y-2">
-                <label className="block text-sm font-semibold text-gray-700">Extra Details?</label>
+                <label className="block text-sm md:text-base lg:text-lg font-semibold text-gray-700">Extra Details?</label>
                 <textarea 
                   name="specialRequests"
                   value={formData.specialRequests}
                   onChange={handleChange}
                   rows={4} 
-                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none placeholder:text-gray-500" 
+                  className="w-full px-5 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#6F1E2D] focus:border-transparent transition-all resize-none placeholder:text-gray-500" 
                   placeholder="Any special requests or dietary requirements..."
                 ></textarea>
               </div>
@@ -239,7 +235,7 @@ export default function ReservationForm() {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-primary text-white py-4 px-6 rounded-lg hover:bg-secondary transition-all font-semibold text-lg disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                className="w-full bg-[#6F1E2D] text-[#ffffff] py-4 px-6 hover:bg-[#5a1623] transition-all text-lg disabled:opacity-50 disabled:cursor-not-allowed shadow-sm rounded-[0.5rem]"
               >
                 {isSubmitting ? 'Submitting...' : 'Confirm Reservation'}
               </button>
@@ -270,6 +266,32 @@ export default function ReservationForm() {
           </FadeIn>
         </div>
       </section>
-    </>
+
+      {/* Private Events & Catering Section */}
+      <section className="py-8 md:py-12 lg:py-16 bg-gray-50">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-4xl mx-auto">
+            <FadeIn delay={0.4}>
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <h2 className="font-bold text-gray-900 mb-4 text-center">Private Events & Catering</h2>
+                <p className="text-gray-600 text-center mb-6 text-sm md:text-base lg:text-lg">
+                  Host your special events with us! We offer private dining and catering services for 
+                  corporate events, weddings, birthday parties, and other celebrations.
+                </p>
+                <div className="text-center">
+                  <a 
+                    href="mailto:catering@cinnamon.com"
+                    className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 rounded-lg hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg"
+                  >
+                    Inquire About Catering
+                  </a>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+          </>
   );
 }

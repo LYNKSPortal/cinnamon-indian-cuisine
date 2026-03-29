@@ -1,7 +1,7 @@
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HomepageSlider from '@/components/HomepageSlider';
 import FadeIn from '@/components/FadeIn';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -26,7 +26,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
 
       {/* Hero Slider Section */}
       <HomepageSlider />
@@ -36,36 +35,27 @@ export default function Home() {
         <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
-              <h2 id="about-heading" className="font-bold text-gray-900 mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl">Our Story</h2>
+              <h2 id="about-heading" className="font-bold text-gray-900 mb-4 md:mb-6">Cinnamon's Story</h2>
             </FadeIn>
             <FadeIn delay={0.2}>
               <div className="space-y-3 md:space-y-4">
-                <p className="text-gray-600 text-sm md:text-base">
-                  Cinnamon brings the authentic taste of India to your table. Founded with passion, 
-                  our restaurant is a celebration of traditional Indian cuisine with aromatic spices 
-                  and rich flavors.
-                </p>
-                <p className="text-gray-600 text-sm md:text-base">
-                  Our chefs, with decades of experience, create dishes that honour the rich 
-                  culinary heritage of India while incorporating fresh, locally sourced ingredients 
-                  and authentic spices.
-                </p>
-                <p className="text-gray-600 text-sm md:text-base">
-                  Whether you're joining us for a family dinner, romantic evening, or business lunch, 
-                  we promise an unforgettable dining experience filled with warmth and hospitality.
+                <p className="text-gray-600 text-sm md:text-base lg:text-lg">
+                  Cinnamon is a family-run Indian restaurant in Castletown, Isle of Man, owned by Nadeem Younus. 
+                  Built on a passion for authentic flavours and warm hospitality, Cinnamon blends traditional 
+                  Indian recipes with a modern, welcoming setting. Every dish is freshly prepared using 
+                  carefully balanced spices, creating food that is both comforting and full of character. 
+                  Whether you are dining in or taking away, the focus is always on quality, consistency, 
+                  and making every guest feel at home.
                 </p>
               </div>
             </FadeIn>
-            <FadeIn delay={0.4}>
-              <div className="mt-6 md:mt-8">
-                <a 
-                  href="/about" 
-                  className="inline-block bg-primary text-white px-6 md:px-8 py-2.5 md:py-3 hover:bg-secondary transition-colors font-medium text-sm md:text-base"
-                  aria-label="Learn more about our story - Navigate to About page"
-                >
-                  Learn More
-                </a>
-              </div>
+            <FadeIn delay={0.4} className="mt-6 md:mt-8">
+              <Link 
+                href="/about" 
+                className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+              >
+                Learn More
+              </Link>
             </FadeIn>
           </div>
         </div>

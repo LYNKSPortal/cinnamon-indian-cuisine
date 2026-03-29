@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A modern restaurant website for Cinnamon Indian Cuisine, showcasing authentic Indian dining experience.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -16,21 +17,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/LYNKSPortal/cinnamon-indian-cuisine/issues"
   },
   "homepage": "https://github.com/LYNKSPortal/cinnamon-indian-cuisine#readme",
   "dependencies": {
     "@types/node": "^25.5.0",
+    "@types/nodemailer": "^7.0.11",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.27",
     "next": "^16.2.1",
+    "nodemailer": "^8.0.4",
     "postcss": "^8.5.8",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "tailwindcss": "^4.2.2",
+    "tailwindcss": "^3.4.19",
     "typescript": "^6.0.2"
   }
 }
