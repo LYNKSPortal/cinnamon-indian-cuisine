@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Header from '@/components/Header'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from "@vercel/analytics/next"
 import './globals.css'
 
 const poppins = Poppins({ 
