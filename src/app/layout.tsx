@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     'twitter:app:id:ipad': '',
   },
   twitter: {
-    card: 'app',
+    card: 'summary_large_image',
     images: [{
       url: '/twitter/twitter-image.jpg',
       width: 1200,
