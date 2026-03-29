@@ -32,7 +32,7 @@ export default function Reservations() {
               href="https://wa.me/447624253642" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 text-white px-6 py-3 hover:bg-green-700 transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+              className="inline-block bg-[#6F1E2D] text-white px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
             >
               Send us a WhatsApp
             </a>
