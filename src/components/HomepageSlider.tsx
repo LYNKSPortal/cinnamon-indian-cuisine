@@ -1,0 +1,167 @@
+'use client';
+
+import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+
+export default function HomepageSlider() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % 5);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + 5) % 5);
+  }, []);
+
+  const goToSlide = useCallback((index: number) => {
+    setCurrentSlide(index);
+  }, []);
+
+  const togglePause = useCallback(() => {
+    setIsPaused(prev => !prev);
+  }, []);
+
+  // Auto-advance slides
+  useEffect(() => {
+    if (isPaused) return;
+    
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [nextSlide, isPaused]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      switch (event.key) {
+        case 'ArrowLeft':
+          prevSlide();
+          break;
+        case 'ArrowRight':
+          nextSlide();
+          break;
+        case ' ':
+        case 'Enter':
+          event.preventDefault();
+          togglePause();
+          break;
+        case 'Home':
+          event.preventDefault();
+          goToSlide(0);
+          break;
+        case 'End':
+          event.preventDefault();
+          goToSlide(4);
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextSlide, prevSlide, goToSlide, togglePause]);
+
+  const slides = [
+    {
+      id: 0,
+      image: '/homepage-slider/cinnamon-1.jpg',
+      title: 'Welcome to Cinnamon',
+      description: 'Authentic Indian dining with aromatic spices and rich flavors',
+      buttonText: 'Reserve a Table'
+    },
+    {
+      id: 1,
+      image: '/homepage-slider/cinnamon-2.jpg',
+      title: 'Traditional Indian Cuisine',
+      description: 'Experience the diverse flavors of India with our authentic recipes',
+      buttonText: 'View Our Menu'
+    },
+    {
+      id: 2,
+      image: '/homepage-slider/cinnamon-3.jpg',
+      title: 'Fresh, Authentic Ingredients',
+      description: 'Quality spices and fresh ingredients prepared with passion',
+      buttonText: 'Discover Our Story'
+    },
+    {
+      id: 3,
+      image: '/homepage-slider/cinnamon-4.jpg',
+      title: 'Perfect for Every Occasion',
+      description: 'From family dinners to celebrations, we make every moment special',
+      buttonText: 'Book Your Table'
+    },
+    {
+      id: 4,
+      image: '/homepage-slider/cinnamon-5.jpg',
+      title: 'Warm Indian Hospitality',
+      description: 'Where every guest is treated like family',
+      buttonText: 'Make a Reservation'
+    }
+  ];
+
+  return (
+    <section 
+      className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-screen overflow-hidden"
+      role="region"
+      aria-label="Restaurant image carousel"
+      aria-roledescription="carousel"
+    >
+      {/* All slides rendered simultaneously with opacity control */}
+      {slides.map((slide, index) => (
+        <div
+          key={slide.id}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            currentSlide === index ? 'opacity-100' : 'opacity-0'
+          }`}
+          role="group"
+          aria-roledescription="slide"
+          aria-label={`${index + 1} of ${slides.length}: ${slide.title}`}
+          aria-hidden={currentSlide !== index}
+        >
+          <div 
+            className="w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.image})` }}
+            role="img"
+            aria-label={`Restaurant image ${index + 1}: ${slide.title}`}
+          >
+            <div className="w-full h-full flex items-center justify-center bg-black/30">
+              <div className="text-center text-white px-4 sm:px-6 md:px-8">
+                <h1 className="font-bold text-white mb-4 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                  {slide.title}
+                </h1>
+                <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-3xl mx-auto">
+                  {slide.description}
+                </p>
+                <Link 
+                  href="/reservations"
+                  className="inline-block bg-primary text-white px-6 md:px-8 py-2.5 md:py-3 hover:bg-secondary transition-colors font-medium text-sm md:text-base"
+                  aria-label={`${slide.buttonText} - Navigate to reservations page`}
+                >
+                  {slide.buttonText}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      
+      {/* Slide Indicators */}
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        {[0, 1, 2, 3, 4].map((index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-colors ${
+              index === currentSlide ? 'bg-white' : 'bg-white/50'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
