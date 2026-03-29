@@ -267,31 +267,7 @@ export default function ReservationForm() {
         </div>
       </section>
 
-      {/* Private Events & Catering Section */}
-      <section className="py-8 md:py-12 lg:py-16 bg-gray-50">
-        <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-          <div className="max-w-4xl mx-auto">
-            <FadeIn delay={0.4}>
-              <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h2 className="font-bold text-gray-900 mb-4 text-center">Private Events & Catering</h2>
-                <p className="text-gray-600 text-center mb-6 text-sm md:text-base lg:text-lg">
-                  Host your special events with us! We offer private dining and catering services for 
-                  corporate events, weddings, birthday parties, and other celebrations.
-                </p>
-                <div className="text-center">
-                  <a 
-                    href="mailto:catering@cinnamon.com"
-                    className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 rounded-lg hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg"
-                  >
-                    Inquire About Catering
-                  </a>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
+      
           </>
   );
 }
