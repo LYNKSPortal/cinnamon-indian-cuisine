@@ -116,13 +116,21 @@ export default function About() {
                 creamy or bold and fiery, our goal is always the same: to deliver food that is full of 
                 flavour and made with care.
               </p>
-              <div className="mt-6 md:mt-8">
+              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/reservations" 
                   className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
                 >
                   Make a Reservation
                 </Link>
+                <a 
+                  href="https://wa.me/447624253642" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-green-600 text-white px-6 py-3 hover:bg-green-700 transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+                >
+                  Send us a WhatsApp
+                </a>
               </div>
             </FadeIn>
             <FadeIn delay={0.2} className="order-2 lg:order-2">
