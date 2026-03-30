@@ -127,7 +127,7 @@ export default function Footer() {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="Cinnamon Restaurant Location"
+                  title="Cinnamon Indian Restaurant on Google Maps"
                   className="w-full"
                 ></iframe>
               </div>
