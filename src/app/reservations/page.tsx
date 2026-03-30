@@ -25,7 +25,7 @@ export default function Reservations() {
             <h2 className="font-bold text-gray-900 mb-6 text-2xl md:text-3xl lg:text-4xl">
               Private Events & Catering
             </h2>
-            <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
+            <p className="text-gray-600 mb-8 max-w-3xl mx-auto text-sm md:text-base lg:text-lg">
               Host your special events with us! We offer private dining and catering services for corporate events, weddings, birthday parties, and other celebrations.
             </p>
             <a 
