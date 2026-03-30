@@ -121,7 +121,7 @@ export default function Footer() {
               <h4 className="mb-4">Find Us</h4>
               <div className="bg-white/10 rounded-lg overflow-hidden mb-4">
                 <iframe
-                  src="https://www.google.com/maps?q=Cinnamon+Indian+Restaurant+Castletown+Isle+of+Man&output=embed"
+                  src="https://www.google.com/maps?q=Cinnamon+Indian+Restaurant+Castletown+Isle+of+Man&output=embed&z=17"
                   width="100%"
                   height="200"
                   style={{ border: 0 }}
