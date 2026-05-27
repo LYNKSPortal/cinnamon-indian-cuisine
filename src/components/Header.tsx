@@ -59,7 +59,7 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/menu" className="text-white hover:text-accent px-3 py-2 text-sm md:text-base lg:text-lg transition-colors">
-                  Our Menu
+                  Dine In Menu
                 </Link>
               </li>
               <li>
@@ -139,7 +139,7 @@ export default function Header() {
                 className="block px-3 py-2 text-white hover:text-accent hover:bg-white/10 rounded-md text-sm md:text-base lg:text-lg transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Our Menu
+                Dine In Menu
               </Link>
               <Link 
                 href="/reservations" 
