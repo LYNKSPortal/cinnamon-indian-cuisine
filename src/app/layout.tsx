@@ -147,7 +147,7 @@ export default function RootLayout({
               "priceRange": "$$",
               "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
               "currenciesAccepted": "GBP",
-              "menu": "https://cinnamon-indian-cuisine.vercel.app/menu",
+              "menu": "https://cinnamon-indian-cuisine.vercel.app/dine-in-menu",
               "reservations": "https://cinnamon-indian-cuisine.vercel.app/reservations",
               "image": [
                 "https://cinnamon-indian-cuisine.vercel.app/homepage-slider/cinnamon-1.jpg",

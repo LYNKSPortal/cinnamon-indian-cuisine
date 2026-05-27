@@ -58,7 +58,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/menu" className="text-white hover:text-accent px-3 py-2 text-sm md:text-base lg:text-lg transition-colors">
+                <Link href="/dine-in-menu" className="text-white hover:text-accent px-3 py-2 text-sm md:text-base lg:text-lg transition-colors">
                   Dine In Menu
                 </Link>
               </li>
@@ -135,7 +135,7 @@ export default function Header() {
                 About Us
               </Link>
               <Link 
-                href="/menu" 
+                href="/dine-in-menu" 
                 className="block px-3 py-2 text-white hover:text-accent hover:bg-white/10 rounded-md text-sm md:text-base lg:text-lg transition-colors text-center"
                 onClick={() => setIsMenuOpen(false)}
               >

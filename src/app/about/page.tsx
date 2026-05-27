@@ -116,7 +116,7 @@ export default function About() {
               </p>
               <div className="mt-6 md:mt-8">
                 <Link 
-                  href="/menu" 
+                  href="/dine-in-menu" 
                   className="inline-block bg-[#6F1E2D] text-[#ffffff] px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
                 >
                   View Our Menu

@@ -87,7 +87,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/menu" className="text-white text-sm md:text-base lg:text-lg hover:text-accent transition-colors">
+                  <Link href="/dine-in-menu" className="text-white text-sm md:text-base lg:text-lg hover:text-accent transition-colors">
                     Dine In Menu
                   </Link>
                 </li>

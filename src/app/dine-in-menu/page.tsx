@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dine In Menu - Cinnamon Indian Cuisine | Peel, Isle of Man",
     description: "Explore Cinnamon's extensive Indian menu featuring traditional curries, tandoori specialties, biryanis, and authentic Indian dishes in Peel.",
-    url: "https://cinnamon-indian-cuisine.vercel.app/menu",
+    url: "https://cinnamon-indian-cuisine.vercel.app/dine-in-menu",
     siteName: "Cinnamon Indian Cuisine",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ["/images/Slider/slider-img-04.jpg"],
   },
   alternates: {
-    canonical: "https://cinnamon-indian-cuisine.vercel.app/menu",
+    canonical: "https://cinnamon-indian-cuisine.vercel.app/dine-in-menu",
   },
 };
 

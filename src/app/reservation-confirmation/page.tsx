@@ -161,7 +161,7 @@ export default function ReservationConfirmation() {
                 Return to Homepage
               </Link>
               <Link 
-                href="/menu" 
+                href="/dine-in-menu" 
                 className="inline-block border-2 border-[#6F1E2D] text-[#6F1E2D] px-6 md:px-8 py-3 hover:bg-[#6F1E2D] hover:text-white transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
               >
                 View Our Menu
