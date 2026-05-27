@@ -88,12 +88,6 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
   },
-  geo: {
-    region: 'IM',
-    placename: 'Peel',
-    position: '54.0829;-4.6188',
-    icbm: '54.0829,-4.6188',
-  },
   category: 'restaurant',
   icons: {
     icon: [
