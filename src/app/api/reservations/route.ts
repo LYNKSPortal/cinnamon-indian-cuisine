@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
           
           <div style="background: #f8f9fa; padding: 20px; text-align: center; border-radius: 0 0 8px 8px; border: 1px solid #ddd; border-top: none;">
             <p style="color: #666; font-size: 12px; margin: 0;">
-              31 Malew Street, Castletown, IM9 1AD, Isle of Man<br>
+              East Quay, Peel, Isle of Man, IM5 1AR<br>
               <a href="mailto:info@cinnamon.co.im" style="color: #6F1E2D;">info@cinnamon.co.im</a>
             </p>
           </div>

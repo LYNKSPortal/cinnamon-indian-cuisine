@@ -3,13 +3,50 @@ import FadeIn from '@/components/FadeIn';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Our Menu - Cinnamon | Indian Cuisine",
-  description: "Explore Cinnamon's authentic Indian menu featuring traditional curries, tandoori dishes, biryanis, and vegetarian specialties.",
-  keywords: ["Indian menu", "authentic Indian cuisine", "curry", "tandoori", "Indian food", "restaurant"],
+  title: "Dine In Menu - Cinnamon Indian Cuisine | Peel, Isle of Man",
+  description: "Explore Cinnamon's extensive Indian menu featuring traditional curries, tandoori specialties, biryanis, vegetarian dishes, and more. Authentic Indian cuisine in Peel, Isle of Man.",
+  keywords: [
+    "Indian menu Peel",
+    "authentic Indian cuisine",
+    "curry restaurant",
+    "tandoori dishes",
+    "Indian food menu",
+    "biryani",
+    "vegetarian Indian dishes",
+    "Cinnamon restaurant menu",
+    "Isle of Man dining",
+    "traditional Indian recipes",
+    "Indian takeaway menu",
+    "lamb curry",
+    "chicken tikka",
+    "paneer dishes",
+    "Indian desserts"
+  ],
   openGraph: {
-    title: "Our Menu - Cinnamon",
-    description: "Explore Cinnamon's authentic Indian menu featuring traditional dishes.",
+    title: "Dine In Menu - Cinnamon Indian Cuisine | Peel, Isle of Man",
+    description: "Explore Cinnamon's extensive Indian menu featuring traditional curries, tandoori specialties, biryanis, and authentic Indian dishes in Peel.",
     url: "https://cinnamon-indian-cuisine.vercel.app/menu",
+    siteName: "Cinnamon Indian Cuisine",
+    images: [
+      {
+        url: "/images/Slider/slider-img-04.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Cinnamon Indian Restaurant Menu - Authentic Indian Dishes",
+        type: "image/jpeg",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dine In Menu - Cinnamon Indian Cuisine",
+    description: "Explore Cinnamon's extensive Indian menu featuring traditional curries, tandoori specialties, and authentic dishes in Peel, Isle of Man.",
+    images: ["/images/Slider/slider-img-04.jpg"],
+  },
+  alternates: {
+    canonical: "https://cinnamon-indian-cuisine.vercel.app/menu",
   },
 };
 
@@ -33,7 +70,7 @@ export default function Menu() {
           <div className="text-center px-4 sm:px-6 md:px-8">
             <FadeIn>
               <h1 className="font-bold text-white mb-3 md:mb-4">
-                Our Menu
+                Dine In Menu
               </h1>
             </FadeIn>
             <FadeIn delay={0.2}>

@@ -167,11 +167,11 @@ export default function Header() {
         )}
       </div>
         
-        {/* Closure Notice */}
+        {/* Location Announcement */}
         <div className="bg-white text-black py-3 px-4 text-center">
           <FadeIn delay={0.5}>
             <p className="text-sm md:text-base lg:text-lg">
-              We are <u>closed from 18 March to 24 March</u>. Thank you for understanding.
+              🎉 We have moved to Peel — and we are now open! Come visit us at our new home. 🎉
             </p>
           </FadeIn>
         </div>

@@ -116,7 +116,7 @@ export default function Accessibility() {
             </p>
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
               <p className="text-gray-600"><strong>Cinnamon Indian Restaurant</strong></p>
-              <p className="text-gray-600">31 Malew Street, Castletown, IM9 1AD, Isle of Man</p>
+              <p className="text-gray-600">East Quay, Peel, Isle of Man, IM5 1AR</p>
               <p className="text-gray-600">Email: info@cinnamon.co.im</p>
               <p className="text-gray-600">Phone: +44 1624 894180</p>
               <p className="text-gray-600">WhatsApp: <a href="https://wa.me/447624253642" target="_blank" rel="noopener noreferrer" className="text-[#6F1E2D] hover:underline">+44 7624 253642</a></p>

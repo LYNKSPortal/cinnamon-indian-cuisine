@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cinnamon-indian-cuisine.vercel.app/sitemap.xml
+
+# Allow search engines to crawl all important pages
+Allow: /about
+Allow: /menu
+Allow: /reservations
+
+# Block unnecessary directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /favicon/
+Disallow: /images/Slider/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific instructions for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

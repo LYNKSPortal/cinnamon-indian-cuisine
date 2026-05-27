@@ -3,13 +3,50 @@ import ReservationForm from '@/components/ReservationForm';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Reservations - Cinnamon | Book a Table",
-  description: "Book your table at Cinnamon Indian Cuisine and find our location, hours, and contact information. Reserve your spot for an authentic Indian dining experience.",
-  keywords: ["Indian restaurant reservations", "book table", "Cinnamon reservations", "Indian dining", "contact information", "restaurant location"],
+  title: "Book a Table - Cinnamon Indian Cuisine | Reservations Peel, Isle of Man",
+  description: "Reserve your table at Cinnamon Indian Cuisine in Peel, Isle of Man. Easy online booking for authentic Indian dining experience. Private events & catering available.",
+  keywords: [
+    "Indian restaurant reservations Peel",
+    "book table Cinnamon",
+    "Indian dining reservations",
+    "restaurant booking Isle of Man",
+    "Cinnamon reservations",
+    "authentic Indian cuisine booking",
+    "private dining reservations",
+    "catering services",
+    "Indian restaurant Peel",
+    "table booking",
+    "restaurant reservations",
+    "East Quay",
+    "Indian food reservations",
+    "family dining reservations",
+    "special events booking"
+  ],
   openGraph: {
-    title: "Reservations - Cinnamon",
-    description: "Book your table at Cinnamon Indian Cuisine and find our location and contact information.",
+    title: "Book a Table - Cinnamon Indian Cuisine | Reservations Peel, Isle of Man",
+    description: "Reserve your table at Cinnamon Indian Cuisine in Peel, Isle of Man. Easy online booking for authentic Indian dining. Private events & catering available.",
     url: "https://cinnamon-indian-cuisine.vercel.app/reservations",
+    siteName: "Cinnamon Indian Cuisine",
+    images: [
+      {
+        url: "/images/Slider/slider-img-01.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Book a Table at Cinnamon Indian Restaurant - Authentic Indian Dining",
+        type: "image/jpeg",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book a Table - Cinnamon Indian Cuisine | Reservations",
+    description: "Reserve your table at Cinnamon Indian Cuisine in Peel, Isle of Man. Easy online booking for authentic Indian dining experience.",
+    images: ["/images/Slider/slider-img-01.jpg"],
+  },
+  alternates: {
+    canonical: "https://cinnamon-indian-cuisine.vercel.app/reservations",
   },
 };
 

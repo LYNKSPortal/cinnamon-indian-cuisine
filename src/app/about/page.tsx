@@ -5,13 +5,47 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About Cinnamon - Our Story | Indian Restaurant",
-  description: "Learn about Cinnamon's story, our passion for authentic Indian cuisine, and our commitment to excellence.",
-  keywords: ["about Cinnamon", "Indian restaurant story", "authentic Indian food", "Indian cuisine", "restaurant history"],
+  title: "About Cinnamon Indian Cuisine - Our Story & Passion for Authentic Indian Food",
+  description: "Discover the story of Cinnamon Indian Cuisine, a family-run restaurant in Peel, Isle of Man. Learn about our passion for authentic Indian recipes, traditional cooking methods, and commitment to exceptional dining experiences.",
+  keywords: [
+    "about Cinnamon Indian Cuisine",
+    "Cinnamon restaurant story",
+    "Nadeem Younus",
+    "family-run Indian restaurant",
+    "Peel restaurant history",
+    "authentic Indian recipes",
+    "traditional Indian cooking",
+    "Isle of Man dining",
+    "Indian cuisine passion",
+    "restaurant philosophy",
+    "hospitality story",
+    "East Quay"
+  ],
   openGraph: {
-    title: "About Cinnamon - Our Story",
-    description: "Learn about Cinnamon's story, our passion for authentic Indian cuisine, and our commitment to excellence.",
+    title: "About Cinnamon Indian Cuisine - Our Story & Passion for Authentic Indian Food",
+    description: "Discover the story of Cinnamon Indian Cuisine, a family-run restaurant in Peel, Isle of Man. Learn about our passion for authentic Indian recipes and exceptional dining.",
     url: "https://cinnamon-indian-cuisine.vercel.app/about",
+    siteName: "Cinnamon Indian Cuisine",
+    images: [
+      {
+        url: "/images/the-chef.jpg",
+        width: 1200,
+        height: 800,
+        alt: "Cinnamon Indian Restaurant Chef - Authentic Indian Cooking",
+        type: "image/jpeg",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Cinnamon Indian Cuisine - Our Story",
+    description: "Discover the story of Cinnamon Indian Cuisine, a family-run restaurant in Peel, Isle of Man with passion for authentic Indian food.",
+    images: ["/images/the-chef.jpg"],
+  },
+  alternates: {
+    canonical: "https://cinnamon-indian-cuisine.vercel.app/about",
   },
 };
 
@@ -54,7 +88,7 @@ export default function About() {
             <FadeIn delay={0.2} className="order-2 lg:order-1">
               <div className="w-full aspect-square rounded-none overflow-hidden">
                 <Image
-                  src="/images/outside-restaurant.jpg"
+                  src="/images/front-of-the-business.jpg"
                   alt="Cinnamon Restaurant Exterior"
                   width={600}
                   height={600}
@@ -66,7 +100,7 @@ export default function About() {
             <FadeIn className="order-1 lg:order-2">
               <h2 className="font-bold text-gray-900 mb-4 md:mb-6">Our Journey</h2>
               <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base lg:text-lg">
-                Cinnamon was created to bring something a little different to Castletown — a place where 
+                Cinnamon was created to bring something a little different to Peel — a place where 
                 traditional Indian cooking meets a relaxed, modern dining experience. As a family-run restaurant 
                 led by Nadeem Younus, everything we do is rooted in genuine care for both our food and our customers.
               </p>
@@ -78,7 +112,7 @@ export default function About() {
               </p>
               <p className="text-gray-600 text-sm md:text-base lg:text-lg">
                 Whether it is a midweek meal, a weekend catch-up, or a takeaway to enjoy at home, we are proud 
-                to be part of the Castletown community.
+                to be part of the Peel community.
               </p>
               <div className="mt-6 md:mt-8">
                 <Link 

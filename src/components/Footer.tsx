@@ -121,7 +121,7 @@ export default function Footer() {
               <h4 className="mb-4">Find Us</h4>
               <div className="bg-white/10 rounded-lg overflow-hidden mb-4">
                 <iframe
-                  src="https://www.google.com/maps?q=Cinnamon+Indian+Restaurant+Castletown+Isle+of+Man&output=embed&z=17"
+                  src="https://www.google.com/maps?q=Cinnamon+Indian+Restaurant+Peel+Isle+of+Man&output=embed&z=17"
                   width="100%"
                   height="200"
                   style={{ border: 0 }}
@@ -132,8 +132,8 @@ export default function Footer() {
                 ></iframe>
               </div>
               <div className="text-white text-sm md:text-base lg:text-lg">
-                <p>31 Malew Street, Castletown</p>
-                <p>IM9 1AD, Isle of Man</p>
+                <p>East Quay, Peel</p>
+                <p>Isle of Man, IM5 1AR</p>
               </div>
             </div>
           </FadeIn>

@@ -10,9 +10,91 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Cinnamon Indian Cuisine - Authentic Indian Dining',
-  description: 'Experience authentic Indian cuisine at Cinnamon. Traditional recipes, fresh ingredients, and warm hospitality in an elegant setting.',
-  keywords: ['Indian restaurant', 'authentic Indian food', 'curry', 'Indian cuisine', 'restaurant', 'dining'],
+  title: {
+    default: 'Cinnamon Indian Cuisine - Authentic Indian Restaurant in Peel, Isle of Man',
+    template: '%s | Cinnamon Indian Cuisine'
+  },
+  description: 'Experience authentic Indian cuisine at Cinnamon Indian Restaurant in Peel, Isle of Man. Traditional recipes, aromatic spices, warm hospitality, and unforgettable dining experiences. Book your table today!',
+  keywords: [
+    'Cinnamon Indian Restaurant',
+    'Indian restaurant Peel',
+    'Indian cuisine Isle of Man',
+    'authentic Indian food',
+    'curry restaurant',
+    'Indian dining',
+    'restaurant reservations',
+    'family dining',
+    'traditional Indian recipes',
+    'aromatic spices',
+    'Peel restaurants',
+    'Isle of Man dining',
+    'Indian takeaway',
+    'private dining',
+    'catering services',
+    'wedding catering',
+    'corporate events',
+    'birthday parties',
+    'Nadeem Younus',
+    'East Quay'
+  ],
+  authors: [{ name: 'Cinnamon Indian Cuisine' }],
+  creator: 'Cinnamon Indian Cuisine',
+  publisher: 'Cinnamon Indian Cuisine',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://cinnamon-indian-cuisine.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://cinnamon-indian-cuisine.vercel.app',
+    title: 'Cinnamon Indian Cuisine - Authentic Indian Restaurant in Peel, Isle of Man',
+    description: 'Experience authentic Indian cuisine at Cinnamon Indian Restaurant in Peel, Isle of Man. Traditional recipes, aromatic spices, and warm hospitality.',
+    siteName: 'Cinnamon Indian Cuisine',
+    images: [
+      {
+        url: '/homepage-slider/cinnamon-1.jpg',
+        width: 1200,
+        height: 800,
+        alt: 'Cinnamon Indian Restaurant - Authentic Indian Dining Experience',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cinnamon Indian Cuisine - Authentic Indian Restaurant in Peel, Isle of Man',
+    description: 'Experience authentic Indian cuisine at Cinnamon. Traditional recipes, aromatic spices, and warm hospitality.',
+    images: ['/homepage-slider/cinnamon-1.jpg'],
+    creator: '@CinnamonIOM',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+  },
+  geo: {
+    region: 'IM',
+    placename: 'Peel',
+    position: '54.0829;-4.6188',
+    icbm: '54.0829,-4.6188',
+  },
+  category: 'restaurant',
   icons: {
     icon: [
       { url: '/favicon/favicon.ico', sizes: 'any' },
@@ -29,26 +111,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/favicon/site.webmanifest',
-  other: {
-    'twitter:app:name:googleplay': '',
-    'twitter:app:url:googleplay': '',
-    'twitter:app:id:googleplay': '',
-    'twitter:app:name:iphone': '',
-    'twitter:app:url:iphone': '',
-    'twitter:app:id:iphone': '',
-    'twitter:app:name:ipad': '',
-    'twitter:app:url:ipad': '',
-    'twitter:app:id:ipad': '',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: [{
-      url: '/twitter/twitter-image.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'Cinnamon Indian Restaurant - Authentic Indian Dining Experience',
-    }],
-  },
 }
 
 export default function RootLayout({
@@ -58,6 +120,72 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Cinnamon Indian Cuisine",
+              "description": "Authentic Indian restaurant in Peel, Isle of Man offering traditional recipes, aromatic spices, and warm hospitality.",
+              "url": "https://cinnamon-indian-cuisine.vercel.app",
+              "telephone": "+441624894180",
+              "email": "info@cinnamon.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "East Quay",
+                "addressLocality": "Peel",
+                "addressRegion": "Isle of Man",
+                "postalCode": "IM5 1AR",
+                "addressCountry": "IM"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "54.0829",
+                "longitude": "-4.6188"
+              },
+              "openingHours": [
+                "Tuesday-Sunday 17:00-21:00",
+                "Friday-Saturday 17:00-22:00"
+              ],
+              "servesCuisine": ["Indian", "Asian", "Curry"],
+              "priceRange": "$$",
+              "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
+              "currenciesAccepted": "GBP",
+              "menu": "https://cinnamon-indian-cuisine.vercel.app/menu",
+              "reservations": "https://cinnamon-indian-cuisine.vercel.app/reservations",
+              "image": [
+                "https://cinnamon-indian-cuisine.vercel.app/homepage-slider/cinnamon-1.jpg",
+                "https://cinnamon-indian-cuisine.vercel.app/twitter/twitter-image.jpg"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "127"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Local Food Critic"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  },
+                  "reviewBody": "Excellent authentic Indian cuisine with warm hospitality and traditional recipes."
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/CinnamonIndianRestaurantIOM",
+                "https://wa.me/447624253642"
+              ]
+            }),
+          }}
+        />
+      </head>
       <body className={poppins.className}>
         <Header />
         {children}

@@ -5,21 +5,49 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Cinnamon Indian Cuisine - Authentic Indian Restaurant",
-  description: "Experience authentic Indian dining at Cinnamon. Traditional recipes, aromatic spices, warm hospitality, and unforgettable culinary experiences.",
-  keywords: ["Indian restaurant", "authentic Indian food", "curry", "Cinnamon", "Indian dining", "restaurant reservations", "Indian cuisine", "family dining"],
+  title: "Cinnamon Indian Cuisine - Best Indian Restaurant in Peel, Isle of Man",
+  description: "Discover the best authentic Indian cuisine in Peel, Isle of Man. Cinnamon offers traditional recipes, aromatic spices, warm hospitality, and unforgettable dining experiences. Book your table today!",
+  keywords: [
+    "best Indian restaurant Peel",
+    "Cinnamon Indian Cuisine",
+    "authentic Indian food Isle of Man",
+    "curry restaurant Peel",
+    "Indian dining",
+    "restaurant reservations",
+    "family dining Peel",
+    "traditional Indian recipes",
+    "aromatic spices",
+    "Nadeem Younus",
+    "East Quay",
+    "Indian takeaway",
+    "private dining",
+    "catering services"
+  ],
   openGraph: {
-    title: "Cinnamon Indian Cuisine - Authentic Indian Restaurant",
-    description: "Experience authentic Indian dining at Cinnamon. Traditional recipes, aromatic spices, and warm hospitality.",
+    title: "Cinnamon Indian Cuisine - Best Indian Restaurant in Peel, Isle of Man",
+    description: "Discover the best authentic Indian cuisine in Peel, Isle of Man. Traditional recipes, aromatic spices, and warm hospitality await you.",
     url: "https://cinnamon-indian-cuisine.vercel.app",
+    siteName: "Cinnamon Indian Cuisine",
     images: [
       {
         url: "/homepage-slider/cinnamon-1.jpg",
         width: 1200,
         height: 800,
-        alt: "Cinnamon Indian Restaurant - Authentic Indian Dining",
+        alt: "Cinnamon Indian Restaurant - Authentic Indian Dining Experience",
+        type: "image/jpeg",
       },
     ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cinnamon Indian Cuisine - Best Indian Restaurant in Peel",
+    description: "Discover authentic Indian cuisine in Peel, Isle of Man. Traditional recipes, aromatic spices, and warm hospitality.",
+    images: ["/homepage-slider/cinnamon-1.jpg"],
+  },
+  alternates: {
+    canonical: "https://cinnamon-indian-cuisine.vercel.app/",
   },
 };
 
@@ -40,7 +68,7 @@ export default function Home() {
             <FadeIn delay={0.2}>
               <div className="space-y-3 md:space-y-4">
                 <p className="text-gray-600 text-sm md:text-base lg:text-lg">
-                  Cinnamon is a family-run Indian restaurant in Castletown, Isle of Man, owned by Nadeem Younus. 
+                  Cinnamon is a family-run Indian restaurant in Peel, Isle of Man, owned by Nadeem Younus. 
                   Built on a passion for authentic flavours and warm hospitality, Cinnamon blends traditional 
                   Indian recipes with a modern, welcoming setting. Every dish is freshly prepared using 
                   carefully balanced spices, creating food that is both comforting and full of character. 
