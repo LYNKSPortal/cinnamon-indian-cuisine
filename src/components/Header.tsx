@@ -63,11 +63,6 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/reservations" className="text-white hover:text-accent px-3 py-2 text-sm md:text-base lg:text-lg transition-colors">
-                  Reservations
-                </Link>
-              </li>
-              <li>
                 <Link 
                   href="/reservations" 
                   className="bg-white text-[#6F1E2D] px-4 py-2 hover:bg-gray-100 transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem] inline-flex items-center gap-2"
@@ -138,13 +133,6 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Dine In Menu
-              </Link>
-              <Link 
-                href="/reservations" 
-                className="block px-3 py-2 text-white hover:text-accent hover:bg-white/10 rounded-md text-sm md:text-base lg:text-lg transition-colors text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Reservations
               </Link>
               <div className="px-3 py-2">
                 <Link 
