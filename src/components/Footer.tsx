@@ -92,6 +92,11 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/takeaway-menu" className="text-white text-sm md:text-base lg:text-lg hover:text-accent transition-colors">
+                    Takeaway Menu
+                  </Link>
+                </li>
+                <li>
                   <Link href="/reservations" className="text-white text-sm md:text-base lg:text-lg hover:text-accent transition-colors">
                     Reservations
                   </Link>
