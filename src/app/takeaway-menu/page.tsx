@@ -550,6 +550,26 @@ export default function TakeawayMenu() {
               </div>
             </FadeIn>
 
+            {/* PDF Download */}
+            <FadeIn delay={1.3}>
+              <div className="text-center py-4">
+                <p className="text-gray-600 mb-6 text-sm md:text-base lg:text-lg">
+                  If you&apos;d like to see the PDF version of this menu, please click the button below.
+                </p>
+                <a
+                  href="/pdfs/Cinnamon-Take-Away-Menu.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#6F1E2D] text-white px-6 py-3 hover:bg-[#5a1623] transition-colors text-sm md:text-base lg:text-lg rounded-[0.5rem]"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM12 17l-4-4h2.5v-4h3v4H16l-4 4z"/>
+                  </svg>
+                  View PDF Menu
+                </a>
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </section>
